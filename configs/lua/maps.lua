@@ -10,8 +10,8 @@ end
 vim.g.mapleader = " "
 
 
--- Set esc for clearing highlights after searching word in file.
-map("n", "<ESC>", ":noh<CR>")
+-- Set cl for clearing highlights after searching word in file.
+map("n", "cl", ":noh<CR>")
 
 
 -- Split navigations.
@@ -32,29 +32,19 @@ map("n", "<S-j>", ":call ResizeDown(1)<CR><Esc>")
 map("n", "<A-[>", ":BufferLineCyclePrev<CR>")
 map("n", "<A-]>", ":BufferLineCycleNext<CR>")
 
-
 -- Buffer closing.
 map("n", "<leader>bc", ":BufferLinePickClose<CR>")
 
-
 -- Buffer moving.
-map("n", "<tab>", ":BufferLineMoveNext<CR>")
-map("n", "<S-tab>", "::BufferLineMovePrev<CR>")
-
-
--- Packer
-map('n', '<leader>pi', ':PackerInstall<CR>')
-map('n', '<leader>pu', ':PackerUpdate<CR>')
-map('n', '<leader>pr', ':PackerClean<CR>')
-map('n', '<leader>ps', ':PackerSync<CR>')
-map('n', '<leader>pc', ':PackerCompile<CR>')
+map("n", "<leader>bl", ":BufferLineMoveNext<CR>")
+map("n", "<leader>bh", "::BufferLineMovePrev<CR>")
 
 
 -- NvimTree toggle
 map("n", "<leader>nt", ":NvimTreeToggle<CR>")
 
 
--- Telescope
+-- Telescop.
 map("n", "<Leader>fw", ":Telescope live_grep<CR>")
 map("n", "<Leader>gt", ":Telescope git_status<CR>")
 map("n", "<Leader>cm", ":Telescope git_commits<CR>")
