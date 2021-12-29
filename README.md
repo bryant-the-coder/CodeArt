@@ -80,8 +80,8 @@ Once complete, run `:PackerCompile`
 
 
 
-* Run `:CodeArtUpdate` inside NeoVim 
-* Restart NeoVim  
+* Run `:CodeArtUpdate` inside NeoVim
+* Restart NeoVim
 * Run `:PackerSync`
 * Restart NeoVim!
 

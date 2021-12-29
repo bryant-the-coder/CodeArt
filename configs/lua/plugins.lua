@@ -35,15 +35,6 @@ return require("packer").startup({function()
     end
   }
 
-  -- This plugin show trailing whitespace.
-  use {
-    "ntpeters/vim-better-whitespace",
-    event = "BufRead",
-    config = function()
-      require("plugins/better-whitespace")
-    end
-  }
-
   -- Icons.
   use {
     "kyazdani42/nvim-web-devicons",
@@ -226,12 +217,6 @@ return require("packer").startup({function()
     end
   }
 
-  -- VsCode like pictograms for lsp.
-  use {
-    "onsails/lspkind-nvim",
-    after = "friendly-snippets"
-  }
-
   -- TODO: Do better lazyloading here for dap.
   use {
     "mfussenegger/nvim-dap",
@@ -383,7 +368,7 @@ return require("packer").startup({function()
     if type(plugin) == "string" then
       use { plugin }
     else
-      use { unpack(plugin) }
+      use { plugin.unpack() }
     end
   end
 
